@@ -1,0 +1,15 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+    <!-- Loop syntax -->
+    <h1> Tasks:</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% empty %}
+            <li>No tasks.</li>
+        {% endfor %}
+    </ul>
+    <!-- django understand link by path name -->
+    <a href="{% url 'tasks:add' %}">Add a new tasks</a>
+{% endblock %}
