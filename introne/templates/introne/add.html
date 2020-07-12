@@ -1,0 +1,14 @@
+{% extends "introne/layout.html" %}
+
+{% block body %}
+    <!-- Add tasks, forms-->
+    <!-- Will take actions-->
+    <h1> Add tasks:</h1>
+    <form action="{% url 'introne:add' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+
+    <a href="{% url 'introne:index' %}">View comments</a>
+{% endblock %}

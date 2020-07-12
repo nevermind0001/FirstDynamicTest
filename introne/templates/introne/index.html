@@ -1,0 +1,15 @@
+{% extends "introne/layout.html" %}
+
+{% block body %}
+    <!-- Loop syntax -->
+    <h1> Comments:</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% empty %}
+            <li>No comments.</li>
+        {% endfor %}
+    </ul>
+    <!-- django understand link by path name -->
+    <a href="{% url 'introne:add' %}">Add a new comments</a>
+{% endblock %}
