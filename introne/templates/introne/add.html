@@ -3,7 +3,7 @@
 {% block body %}
     <!-- Add tasks, forms-->
     <!-- Will take actions-->
-    <h1> Add tasks:</h1>
+    <h1>Add comment:</h1>
     <form action="{% url 'introne:add' %}" method="POST">
         {% csrf_token %}
         {{ form }}
